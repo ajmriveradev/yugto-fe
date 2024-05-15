@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.orelegaOne {
+  font-family: var(--font-orelega-one);
+}

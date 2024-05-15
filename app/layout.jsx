@@ -1,5 +1,11 @@
 import "./globals.css";
-import Navbar from "./ui/navbar/Navbar";
+import { Orelega_One } from 'next/font/google';
+
+const orelega_one_init = Orelega_One({
+  subsets: ['latin'],
+  weight: "400",
+  variable: '--font-orelega-one'
+})
 
 export const metadata = {
   title: "Yugto",
@@ -9,12 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <div className="flex flex-col h-full w-full">
-          <Navbar />
-          <div className="flex-1 h-10 bg-red-100">
-            {children}
-          </div>
+      <body className={orelega_one_init.variable}>
+        <div className="flex bg-blue-100">
+          {children}
         </div>
       </body>
     </html>
