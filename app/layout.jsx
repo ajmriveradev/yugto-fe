@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={orelega_one_init.variable}>
-        <div className="flex bg-blue-100">
+        <div className="flex bg-blue-50">
           {children}
         </div>
       </body>
