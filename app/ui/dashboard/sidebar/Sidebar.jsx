@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
-import React from 'react'
+import React from 'react';
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -19,7 +19,7 @@ const Sidebar = () => {
         <div className='flex items-center justify-center'>
           <h3 className="text-6xl font-bold mt-5 orelegaOne text-slate-50">Yugto</h3>
         </div>
-        <div className='flex flex-col justify-between h-full'>
+        <div className='flex flex-col justify-between h-full mt-3'>
           <div>
             <div 
               onClick={() => router.push("/dashboard")}

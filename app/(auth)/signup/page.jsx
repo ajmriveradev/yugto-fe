@@ -57,7 +57,7 @@ const SignUpPage = () => {
       <div className="flex flex-col justify-center items-center my-4">
         <Button
           className="
-            text-xl font-large w-32 h-10 rounded-2xl drop-shadow-xl text-slate-50 mx-3 bg-sky-500 
+            text-xl font-large w-32 h-10 rounded-2xl drop-shadow-xl text-slate-50 mx-3 bg-sky-800 
             hover:bg-sky-300 
             focus:ring-4 focus:ring-sky-300 
             dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800

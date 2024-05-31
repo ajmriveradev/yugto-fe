@@ -1,7 +1,7 @@
 'use client'
 
+import { Button } from '@headlessui/react';
 import React, { useState } from 'react'
-import Button from '../ui/button/Button';
 
 const Dashboard = () => {
   const [consultations, setConsultations] = useState([
@@ -104,27 +104,27 @@ const Dashboard = () => {
             <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <Button title="View" color="green" type="default" handleClick={ () => console.log("CLICK") }/>
+              <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700" handleClick={ () => console.log("CLICK") }>View</Button>
             </div>
             <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <Button title="View" color="green" type="default" handleClick={ () => console.log("CLICK") }/>
+              <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700" handleClick={ () => console.log("CLICK") }>View</Button>
             </div>
             <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <Button title="View" color="green" type="default" handleClick={ () => console.log("CLICK") }/>
+              <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700" handleClick={ () => console.log("CLICK") }>View</Button>
             </div>
             <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <Button title="View" color="green" type="default" handleClick={ () => console.log("CLICK") }/>
+              <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700" handleClick={ () => console.log("CLICK") }>View</Button>
             </div>
             <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <Button title="View" color="green" type="default" handleClick={ () => console.log("CLICK") }/>
+              <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700" handleClick={ () => console.log("CLICK") }>View</Button>
             </div>
           </div>
         </div>

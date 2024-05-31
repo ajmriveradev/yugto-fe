@@ -1,7 +1,10 @@
 "use client"
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const LogInPage = () => {
+  const router = useRouter();
+
   return (
     <div className="flex flex-col h-full w-full justify-center bg-zinc-50">
       <div className="flex flex-col justify-center items-center w-full">
@@ -25,7 +28,7 @@ const LogInPage = () => {
           dark:bg-sky-900 dark:hover:bg-sky-900 dark:focus:ring-sky-900"
           onClick={ () => { 
             console.log("CLICKED LOG IN");
-            
+            router.push("/dashboard");
           }}
         >
           Log in

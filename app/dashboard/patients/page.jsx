@@ -57,8 +57,8 @@ const Patients = () => {
               <h1 className="text-xl ml-3">See All</h1>
             </div>
           </div>
-          <div className='flex flex-row'>
-            <div className='h-52 w-1/3 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
+          <div className='flex flex-row mx-24 my-8'>
+            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
               <p className='text-xl font-semibold'>Age: 25 y/o</p>
               <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
@@ -69,18 +69,7 @@ const Patients = () => {
                 <li className='ml-6'>ADHD</li>
               </ul>
             </div>
-            <div className='h-52 w-1/3 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <p className='text-xl font-semibold'>Age: 25 y/o</p>
-              <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
-              <p className='text-xl font-semibold'>Known Conditions:</p>
-              <ul className='list-disc'>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-              </ul>
-            </div>
-            <div className='h-52 w-1/3 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
+            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
               <p className='text-xl font-semibold'>Age: 25 y/o</p>
               <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
@@ -92,41 +81,28 @@ const Patients = () => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className='mt-5 ml-5'>
-          <div className='flex w-full my-3'>
-            <div className='flex justify-start'>
-              <p className="text-4xl font-bold">Scheduled Appointments</p>
-            </div>
-            <div className='flex items-end orelegaOne text-blue-900'>
-              <h1 className="text-xl ml-3">See All</h1>
-            </div>
-          </div>
-          <div className='flex flex-col ml-3'>
-            <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
+          <div className='flex flex-row mx-24'>
+            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <button className='h-10 w-16 rounded-lg drop-shadow-2xl bg-green-400 hover:bg-green-300 border-2 border-green-700'>View</button>
+              <p className='text-xl font-semibold'>Age: 25 y/o</p>
+              <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
+              <p className='text-xl font-semibold'>Known Conditions:</p>
+              <ul className='list-disc'>
+                <li className='ml-6'>ADHD</li>
+                <li className='ml-6'>ADHD</li>
+                <li className='ml-6'>ADHD</li>
+              </ul>
             </div>
-            <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
+            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
               <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <button className='h-10 w-16 rounded-lg drop-shadow-2xl bg-green-400 hover:bg-green-300 border-2 border-green-700'>View</button>
-            </div>
-            <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <button className='h-10 w-16 rounded-lg drop-shadow-2xl bg-green-400 hover:bg-green-300 border-2 border-green-700'>View</button>
-            </div>
-            <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <button className='h-10 w-16 rounded-lg drop-shadow-2xl bg-green-400 hover:bg-green-300 border-2 border-green-700'>View</button>
-            </div>
-            <div className='flex items-center justify-between h-20 w-5/6 bg-blue-200 rounded-md px-4 py-3 my-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>May 25 - 10:00 AM</p>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <button className='h-10 w-16 rounded-lg drop-shadow-2xl bg-green-400 hover:bg-green-300 border-2 border-green-700'>View</button>
+              <p className='text-xl font-semibold'>Age: 25 y/o</p>
+              <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
+              <p className='text-xl font-semibold'>Known Conditions:</p>
+              <ul className='list-disc'>
+                <li className='ml-6'>ADHD</li>
+                <li className='ml-6'>ADHD</li>
+                <li className='ml-6'>ADHD</li>
+              </ul>
             </div>
           </div>
         </div>
