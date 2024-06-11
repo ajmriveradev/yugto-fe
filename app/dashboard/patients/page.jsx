@@ -1,8 +1,32 @@
 "use client"
-import SearchBar from '@/app/ui/dashboard/search-bar/SearchBar';
+
 import React, { useState } from 'react'
+import SearchBar from '@/app/ui/dashboard/search-bar/SearchBar';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Button } from '@/components/ui/button'
+import { Label } from '@/components/ui/label'
+import { Badge } from "@/components/ui/badge"
+import { Input } from '@/components/ui/input'
+import { useRouter } from 'next/navigation';
 
 const Patients = () => {
+  const router = useRouter();
   const [consultations, setConsultations] = useState([
     {
       "name": "Andrei Rivera",
@@ -18,92 +42,214 @@ const Patients = () => {
     }
   ]);
 
-  const ConsultationItem = ({ name, age, lastSeen, knownConditions }) => (
-    <div className='bg-blue-300 rounded-lg p-3 my-3'>
-      <h3 className='text-2xl font-bold'>{name}</h3>
-      <p>Age: {age}</p>
-      <p>Last Seen: {lastSeen}</p>
-      <p className='text-lg font-semibold mt-3'>Known Conditions:</p>
-      {
-        knownConditions?.length > 0 ?
-        <ul>
-          {
-            knownConditions.map( (knownCondition, index) => {
-              return <li key={index}>{knownCondition}</li>
-            })
-          }
-        </ul>
-        :
-        <p>None</p>
-      }
-    </div>
-  )
+  const recentPatients = [
+    {
+      "id": 1,
+      "first_name": "Andrei",
+      "last_name": "Rivera",
+      "age": 25,
+      "last_seen": "2024/01/24",
+      "known_conditions": [
+        {
+          "id": 1,
+          "name": "Asthma",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+        {
+          "id": 2,
+          "name": "ADHD",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+        {
+          "id": 3,
+          "name": "Peanut Allergy",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+      ]
+    },
+    {
+      "id": 2,
+      "first_name": "April",
+      "last_name": "Gonzales",
+      "age": 29,
+      "last_seen": "2024/01/24",
+      "known_conditions": null
+    },
+    {
+      "id": 3,
+      "first_name": "Tofu",
+      "last_name": "Alexander",
+      "age": 12,
+      "last_seen": "2024/01/24",
+      "known_conditions": [
+        {
+          "id": 1,
+          "name": "Obese",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+        {
+          "id": 2,
+          "name": "Autistic",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+      ]
+    },
+    {
+      "id": 4,
+      "first_name": "Tofu",
+      "last_name": "Alexander",
+      "age": 12,
+      "last_seen": "2024/01/24",
+      "known_conditions": [
+        {
+          "id": 1,
+          "name": "Obese",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+        {
+          "id": 2,
+          "name": "Autistic",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+      ]
+    },
+    {
+      "id": 5,
+      "first_name": "Tofu",
+      "last_name": "Alexander",
+      "age": 12,
+      "last_seen": "2024/01/24",
+      "known_conditions": [
+        {
+          "id": 1,
+          "name": "Obese",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+        {
+          "id": 2,
+          "name": "Autistic",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+      ]
+    },
+    {
+      "id": 6,
+      "first_name": "April",
+      "last_name": "Gonzales",
+      "age": 29,
+      "last_seen": "2024/01/24",
+      "known_conditions": null
+    },
+    {
+      "id": 7,
+      "first_name": "Tofu",
+      "last_name": "Alexander",
+      "age": 12,
+      "last_seen": "2024/01/24",
+      "known_conditions": [
+        {
+          "id": 1,
+          "name": "Obese",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+        {
+          "id": 2,
+          "name": "Autistic",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+      ]
+    },
+    {
+      "id": 8,
+      "first_name": "Tofu",
+      "last_name": "Alexander",
+      "age": 12,
+      "last_seen": "2024/01/24",
+      "known_conditions": [
+        {
+          "id": 1,
+          "name": "Obese",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+        {
+          "id": 2,
+          "name": "Autistic",
+          "created_at": "2021/02/03",
+          "created_by": 34  //medical professional id
+        },
+      ]
+    },
+  ]
 
   return (
-    <div className='flex flex-1 overflow-auto h-full'>
-      <div className='flex flex-col p-3 bg-slate-50 w-full h-full overflow-auto'>
+    <div className='flex flex-1 overflow-auto h-full '>
+      <div className='flex flex-col p-3 bg-slate-50 w-full h-full overflow-auto '>
         <div className='flex justify-center '>
-          <h2 className="text-6xl font-bold orelegaOne text-green-800 justify-center">Patients</h2>
+          <h2 className="text-6xl font-bold orelegaOne text-sky-700 justify-center">Patients</h2>
         </div>
         <div className='mx-5 mt-5'>
           <SearchBar />
         </div>
-        <div className='mt-5 ml-5'>
-          <div className='flex w-full my-3'>
-            <div className='flex justify-start'>
-              <p className="text-4xl font-bold">Recent Patients</p>
-            </div>
-            <div className='flex items-end orelegaOne text-blue-900'>
-              <h1 className="text-xl ml-3">See All</h1>
-            </div>
-          </div>
-          <div className='flex flex-row mx-24 my-8'>
-            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <p className='text-xl font-semibold'>Age: 25 y/o</p>
-              <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
-              <p className='text-xl font-semibold'>Known Conditions:</p>
-              <ul className='list-disc'>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-              </ul>
-            </div>
-            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <p className='text-xl font-semibold'>Age: 25 y/o</p>
-              <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
-              <p className='text-xl font-semibold'>Known Conditions:</p>
-              <ul className='list-disc'>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-              </ul>
-            </div>
-          </div>
-          <div className='flex flex-row mx-24'>
-            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <p className='text-xl font-semibold'>Age: 25 y/o</p>
-              <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
-              <p className='text-xl font-semibold'>Known Conditions:</p>
-              <ul className='list-disc'>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-              </ul>
-            </div>
-            <div className='h-64 w-1/2 bg-blue-200 rounded-md px-4 py-3 mx-3 drop-shadow-xl'>
-              <p className='text-2xl font-bold'>Andrei Rivera</p>
-              <p className='text-xl font-semibold'>Age: 25 y/o</p>
-              <p className='text-xl font-semibold'>Last Seen: 2024-03-21 09:55 AM</p>
-              <p className='text-xl font-semibold'>Known Conditions:</p>
-              <ul className='list-disc'>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-                <li className='ml-6'>ADHD</li>
-              </ul>
-            </div>
+        
+        <div className='flex flex-row justify-center mt-8'>
+          <div className='grid grid-cols-4 gap-8'>
+            {
+              recentPatients.map( (patient) => {
+                return(
+                  <Card className="flex flex-col justify-between mr-3 w-80">
+                    <CardHeader className="flex flex-row gap-4 items-center justify-between">
+                      {/* avatar */}
+                      <div>
+                        <CardTitle className="font-bold">{patient.first_name} {patient.last_name}</CardTitle>
+                        <CardDescription>Last Seen: {patient.last_seen}</CardDescription>
+                      </div>
+                      <Badge variant="secondary">{patient.id}</Badge>
+                    </CardHeader>
+                    <CardContent className="flex flex-col justify-start h-full">
+                      <div className='flex flex-row'>
+                        <p className='font-semibold mr-8'>Age:</p>
+                        <p>{patient.age} years {patient.age} months</p>
+                      </div>
+                      <p className="font-semibold">{!!patient.known_conditions ? 'Known Conditions: ' : 'No Known Conditions'}</p>
+                      {
+                        !!patient.known_conditions &&
+                        <ul className='list-disc list-inside'>
+                          {
+                            patient.known_conditions.map( (kc) => {
+                                return(
+                                  <li className=''>{kc.name}</li>
+                                )
+                              }
+                            )
+                          }
+                        </ul>
+                      }
+                    </CardContent>
+                    <CardFooter className="flex justify-end">
+                      <Button
+                        onClick={ () => { 
+                          router.push(`/dashboard/patients/${patient.id}`)
+                        }}
+                      >
+                        View
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                )
+              })
+            }
           </div>
         </div>
       </div>

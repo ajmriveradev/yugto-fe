@@ -1,5 +1,5 @@
 "use client"
-import Button from '@/app/ui/button/Button'
+import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const ProfilePage = () => {
@@ -7,7 +7,7 @@ const ProfilePage = () => {
     <div className='flex flex-1 overflow-auto h-full'>
       <div className='flex flex-col p-3 bg-slate-50 w-full h-full overflow-auto'>
         <div className='flex justify-center'>
-          <h2 className="text-6xl font-bold orelegaOne text-green-800 justify-center">Profile</h2>
+          <h2 className="text-6xl font-bold orelegaOne text-sky-700 justify-center">Profile</h2>
         </div>
         <div className='mt-8 ml-5'>
           <div className='flex flex-row'>
@@ -40,12 +40,7 @@ const ProfilePage = () => {
                   <input type="text" value="09565210653" className='mr-5 text-center'></input>
                 </div>
                 <div className='flex justify-end mr-5 mt-14'>
-                  <Button
-                    title="Save"
-                    type="outlined"
-                    color="green"
-                    handleClick={ () => console.log("SAVE") }
-                  />
+                  <Button onClick={ () => { console.log("SAVE") }}>Save</Button>
                 </div>
               </div>
             </div>
@@ -64,12 +59,7 @@ const ProfilePage = () => {
                   <input type="password" value="Internal Medicine" className='mr-5 text-center'></input>
                 </div>
                 <div className='flex justify-end mr-5 mt-6'>
-                  <Button
-                    title="Save"
-                    type="outlined"
-                    color="green"
-                    handleClick={ () => console.log("SAVE") }
-                  />
+                  <Button onClick={ () => { console.log("SAVE") }}>Save</Button>
                 </div>
               </div>
             </div>
